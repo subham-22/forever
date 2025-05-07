@@ -16,9 +16,10 @@ connectCloudinary();
 // middlewares
 app.use(express.json())
 const allowedOrigins = [
-      "https://quiet-hummingbird-0c190c.netlify.app", // admin site URL
-    "https://imaginative-selkie-ec3c39.netlify.app" // (optional) main site URL
+    "https://quiet-hummingbird-0c190c.netlify.app", // admin panel
+    "https://imaginative-selkie-ec3c39.netlify.app" // frontend site
   ];
+  
   
   app.use(cors({
     origin: function (origin, callback) {
