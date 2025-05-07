@@ -17,7 +17,7 @@ connectCloudinary();
 app.use(express.json())
 const allowedOrigins = [
     "https://quiet-hummingbird-0c190c.netlify.app", // admin panel
-    "https://app.netlify.com" // frontend site
+    "hhttps://foreverjwell.netlify.app/" // frontend site
   ];
   
   
