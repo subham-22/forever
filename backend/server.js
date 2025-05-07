@@ -16,7 +16,7 @@ connectCloudinary();
 // middlewares
 app.use(express.json())
 const allowedOrigins = [
-    "https://curious-genie-7d401b.netlify.app/", // admin site URL
+      "https://zingy-rolypoly-7eaa11.netlify.app", // admin site URL
     "https://reliable-medovik-481b91.netlify.app/collection" // (optional) main site URL
   ];
   
