@@ -15,8 +15,23 @@ connectDB();
 connectCloudinary();
 // middlewares
 app.use(express.json())
-app.use(cors())
-
+const allowedOrigins = [
+    'https://velvety-bombolone-88ce45.netlify.app',
+    'https://earnest-moxie-65e778.netlify.app'
+  ];
+  
+  app.use(cors({
+    origin: function (origin, callback) {
+      // allow requests with no origin (like mobile apps or curl)
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      } else {
+        return callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true // if you're using cookies/auth headers
+  }));
 // api endpoints
 app.use('/api/user', userRouter);
 app.use('/api/product', productRouter);
