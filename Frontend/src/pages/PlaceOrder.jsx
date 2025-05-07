@@ -62,6 +62,7 @@ const PlaceOrder = () => {
             navigate('/orders');
           } else {
             toast.error(response.data.message);
+            navigate('/login')
           }
           break;
         default:
