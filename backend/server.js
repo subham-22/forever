@@ -17,7 +17,7 @@ connectCloudinary();
 app.use(express.json())
 const allowedOrigins = [
       "https://zingy-rolypoly-7eaa11.netlify.app", // admin site URL
-    "https://681b5ff1492d34053ee0c645--roaring-chimera-dba534.netlify.app/" // (optional) main site URL
+    "https://reliable-medovik-481b91.netlify.app/collection" // (optional) main site URL
   ];
   
   app.use(cors({
