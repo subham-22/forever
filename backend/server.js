@@ -15,7 +15,19 @@ connectDB();
 connectCloudinary();
 // middlewares
 app.use(express.json())
-app.use(cors())
+const allowedOrigins = [
+    "https://curious-genie-7d401b.netlify.app/", // admin site URL
+    "https://reliable-medovik-481b91.netlify.app/collection" // (optional) main site URL
+  ];
+  
+  app.use(cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) return callback(null, true);
+      return callback(new Error("Not allowed by CORS"));
+    },
+    credentials: true
+  }));
+  
 
 // api endpoints
 app.use('/api/user', userRouter);
