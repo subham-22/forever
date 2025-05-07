@@ -24,7 +24,7 @@ const Hero = () => {
 
       setTimeout(() => {
         setAnimating(false);
-      }, 500); // match transition duration
+      }, 500);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -38,7 +38,7 @@ const Hero = () => {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-[60vh] sm:h-[400px] overflow-hidden border border-gray-400">
+    <div className="relative w-full aspect-[16/9] sm:aspect-[21/9] overflow-hidden">
       {/* Previous Slide */}
       {previousIndex !== null && (
         <div
