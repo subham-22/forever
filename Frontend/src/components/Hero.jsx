@@ -22,11 +22,10 @@ const Hero = () => {
       setAnimating(true);
       setCurrentIndex((prev) => (prev + 1) % media.length);
 
-      // Stop animating after animation ends
       setTimeout(() => {
         setAnimating(false);
       }, 500); // match transition duration
-    }, 2000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [currentIndex]);
@@ -39,8 +38,8 @@ const Hero = () => {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-[400px] overflow-hidden border border-gray-400">
-      {/* Previous Slide - moves left */}
+    <div className="relative w-full h-[60vh] sm:h-[400px] overflow-hidden border border-gray-400">
+      {/* Previous Slide */}
       {previousIndex !== null && (
         <div
           key={`prev-${previousIndex}`}
@@ -65,7 +64,7 @@ const Hero = () => {
         </div>
       )}
 
-      {/* Current Slide - comes from right */}
+      {/* Current Slide */}
       <div
         key={`curr-${currentIndex}`}
         className={`absolute w-full h-full top-0 left-0 z-20 transition-transform duration-500 ease-in-out ${
