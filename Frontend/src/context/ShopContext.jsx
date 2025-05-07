@@ -8,7 +8,7 @@ export const ShopContext = createContext();
 const ShopContextProvider = (props) => {
     const currency = 'Rs';
     const delivery_fee = 100;
-    const backendUrl = 'http://localhost:4000';
+    const backendUrl = 'https://forever-wvl6.onrender.com';
 
     const [search, setSearch] = useState('');
     const [showSearch, setShowSearch] = useState(false);
